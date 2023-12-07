@@ -18,6 +18,7 @@
 		6353603C2B1E7785007F6ADA /* NewsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353603B2B1E7785007F6ADA /* NewsListRouter.swift */; };
 		635360522B1E9878007F6ADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635360512B1E9878007F6ADA /* SceneDelegate.swift */; };
 		635360542B212586007F6ADA /* NewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635360532B212586007F6ADA /* NewsProtocol.swift */; };
+		635360652B2140AE007F6ADA /* NewsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635360642B2140AE007F6ADA /* NewsDetailsPresenter.swift */; };
 		E0CF00DE84D46E1501F426B9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BD8576C980C5C765F4DC75 /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		6353603B2B1E7785007F6ADA /* NewsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRouter.swift; sourceTree = "<group>"; };
 		635360512B1E9878007F6ADA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		635360532B212586007F6ADA /* NewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsProtocol.swift; sourceTree = "<group>"; };
+		635360642B2140AE007F6ADA /* NewsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsPresenter.swift; sourceTree = "<group>"; };
 		6A1EEC484EE8DCB199821E8D /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		9882786E6599A3BEDD9B1FB3 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				635360202B1E734F007F6ADA /* Assets.xcassets */,
 				635360222B1E734F007F6ADA /* LaunchScreen.storyboard */,
 				635360252B1E734F007F6ADA /* Info.plist */,
+				635360642B2140AE007F6ADA /* NewsDetailsPresenter.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				635360542B212586007F6ADA /* NewsProtocol.swift in Sources */,
 				635360182B1E734E007F6ADA /* AppDelegate.swift in Sources */,
 				635360342B1E7714007F6ADA /* NewsListPresenter.swift in Sources */,
+				635360652B2140AE007F6ADA /* NewsDetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

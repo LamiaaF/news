@@ -17,6 +17,9 @@ class NewsRouter: NewsRouterProtocol {
     }
 
     func pushToArticleDetail(article: ArticleEntity) {
-        // ... your implementation
-    }
+        let newsDetailsView = NewsDetailsViewController(article: ArticleEntity)
+              
+               if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+                   navigationController.pushViewController(newsDetailsView, animated: true)
+               }    }
 }

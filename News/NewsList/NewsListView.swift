@@ -8,6 +8,21 @@ class NewsListViewController: UIViewController, NewsViewProtocol {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
+
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 0
+        return label
+    }()
+
 
     private var articles: [ArticleEntity] = []
 
@@ -57,14 +72,33 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let article = articles[indexPath.row]
+         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+         let article = articles[indexPath.row]
 
-        cell.textLabel?.text = article.title
-        cell.detailTextLabel?.text = article.description
+         titleLabel.text = article.title
+         descriptionLabel.text = article.description
 
-        return cell
-    }
+         // Add titleLabel and descriptionLabel as subviews to the cell
+         cell.contentView.addSubview(titleLabel)
+         cell.contentView.addSubview(descriptionLabel)
+
+         // Layout constraints for titleLabel
+         NSLayoutConstraint.activate([
+             titleLabel.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 8),
+             titleLabel.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 8),
+             titleLabel.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -8)
+         ])
+
+         // Layout constraints for descriptionLabel
+         NSLayoutConstraint.activate([
+             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+             descriptionLabel.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 8),
+             descriptionLabel.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -8),
+             descriptionLabel.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -8)
+         ])
+
+         return cell
+     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        presenter?.articleSelected(at: indexPath.row)
