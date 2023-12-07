@@ -15,11 +15,12 @@ class NewsRouter: NewsRouterProtocol {
         
         return view
     }
-
+    
     func pushToArticleDetail(article: ArticleEntity) {
-        let newsDetailsView = NewsDetailsViewController(article: ArticleEntity)
-              
-               if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
-                   navigationController.pushViewController(newsDetailsView, animated: true)
-               }    }
+        //        let newsDetailsView = NewsDetailsViewController(article: ArticleEntity)
+        //
+        //               if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+        //                   navigationController.pushViewController(newsDetailsView, animated: true)
+        //               }    }
+    }
 }
